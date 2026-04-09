@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ropter — AI-Powered Sales Intelligence</title>
+    <meta name="author" content="wpriverthemes.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Ropter is AI-powered sales intelligence that scores deal health, flags risks, and coaches your reps — directly inside your CRM.">
+    <meta name="keywords" content="AI sales intelligence, deal scoring software, sales pipeline AI, CRM analytics, Pipedrive AI, sales coaching tool">
+    <meta property="og:title" content="Ropter — Close More Deals With AI That Knows Your Pipeline">
+    <meta property="og:description" content="Score deal health, flag risks, and coach your reps with AI — directly inside your CRM.">
+    <meta property="og:url" content="https://ropter.io">
+
+    <!-- font -->
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/icon/icomoon/style.css">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick.theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/img/favicon.png">
+</head>
+
+<body class="counter-scroll">
+    <canvas class="cursor-trail" id="trail" style="display: none;"></canvas>
+
+    <!-- Scroll Top -->
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="ic-wrap">
+            <span class="icon icon-long-arrow-alt-up-solid"></span>
+        </span>
+    </button>
+    <!-- /Scroll Top -->
+
+    <!-- #wrapper -->
+    <main id="wrapper">
+
+        <!-- Header -->
+        <header class="tf-header header2">
+            <div class="header-inner">
+                <a href="index.html">
+                    <img src="assets/images/logo/Ropter_Horizontal_Logo_Transparent.png" alt="Ropter" style="height: 32px; width: auto;">
+                </a>
+                <a href="https://app.ropter.io" target="_blank" class="tf-btn d-lg-flex d-none">
+                    Open App
+                </a>
+                <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
+                    <i class="icon icon-grip-lines-solid"></i>
+                </a>
+            </div>
+        </header>
+        <!-- /Header -->
+        <!-- Hero Banner -->
+        <div class="section-hero">
+            <div class="hero-image"></div>
+            <div class="container">
+                <div class="content-wrap text-center">
+                    <div class="sub fw-semibold effectFade fadeUp">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.53252 12.0966C3.75106 11.5025 4.59108 11.5025 4.81645 12.0966L5.54037 14.0567C5.60866 14.2411 5.75891 14.3913 5.9433 14.4596L7.90335 15.1835C8.49751 15.4021 8.49751 16.2421 7.90335 16.4674L5.9433 17.1914C5.75891 17.2597 5.60866 17.4099 5.54037 17.5943L4.81645 19.5543C4.59791 20.1485 3.75789 20.1485 3.53252 19.5543L2.8086 17.5943C2.74031 17.4099 2.59006 17.2597 2.40566 17.1914L0.44562 16.4674C-0.14854 16.2489 -0.14854 15.4089 0.44562 15.1835L2.40566 14.4596C2.59006 14.3913 2.74031 14.2411 2.8086 14.0567L3.53252 12.0966Z" fill="url(#paint0_linear_580_105)"/>
+                            <path d="M3.53252 12.0966C3.75106 11.5025 4.59108 11.5025 4.81645 12.0966L5.54037 14.0567C5.60866 14.2411 5.75891 14.3913 5.9433 14.4596L7.90335 15.1835C8.49751 15.4021 8.49751 16.2421 7.90335 16.4674L5.9433 17.1914C5.75891 17.2597 5.60866 17.4099 5.54037 17.5943L4.81645 19.5543C4.59791 20.1485 3.75789 20.1485 3.53252 19.5543L2.8086 17.5943C2.74031 17.4099 2.59006 17.2597 2.40566 17.1914L0.44562 16.4674C-0.14854 16.2489 -0.14854 15.4089 0.44562 15.1835L2.40566 14.4596C2.59006 14.3913 2.74031 14.2411 2.8086 14.0567L3.53252 12.0966Z" fill="url(#paint1_linear_580_105)"/>
+                            <path d="M11.4068 0.670991C11.7346 -0.223664 12.9981 -0.223664 13.3259 0.670991L14.7874 4.61157C14.8898 4.89157 15.1152 5.11011 15.3952 5.21938L19.3358 6.68088C20.2304 7.00869 20.2304 8.27214 19.3358 8.59995L15.3952 10.0614C15.1152 10.1639 14.8967 10.3893 14.7874 10.6693L13.3259 14.6098C12.9981 15.5045 11.7346 15.5045 11.4068 14.6098L9.94534 10.6693C9.8429 10.3893 9.61753 10.1707 9.33752 10.0614L5.39694 8.59995C4.50229 8.27214 4.50229 7.00869 5.39694 6.68088L9.33752 5.21938C9.61753 5.11694 9.83607 4.89157 9.94534 4.61157L11.4068 0.670991Z" fill="url(#paint2_linear_580_105)"/>
+                            <path d="M11.4068 0.670991C11.7346 -0.223664 12.9981 -0.223664 13.3259 0.670991L14.7874 4.61157C14.8898 4.89157 15.1152 5.11011 15.3952 5.21938L19.3358 6.68088C20.2304 7.00869 20.2304 8.27214 19.3358 8.59995L15.3952 10.0614C15.1152 10.1639 14.8967 10.3893 14.7874 10.6693L13.3259 14.6098C12.9981 15.5045 11.7346 15.5045 11.4068 14.6098L9.94534 10.6693C9.8429 10.3893 9.61753 10.1707 9.33752 10.0614L5.39694 8.59995C4.50229 8.27214 4.50229 7.00869 5.39694 6.68088L9.33752 5.21938C9.61753 5.11694 9.83607 4.89157 9.94534 4.61157L11.4068 0.670991Z" fill="url(#paint3_linear_580_105)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_580_105" x1="10.2993" y1="-1.30435" x2="21.6031" y2="11.1057" gradientUnits="userSpaceOnUse">
+                            <stop offset="1" stop-color="#555D64"/>
+                            <stop offset="1" stop-color="#292C2E"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_580_105" x1="10.0034" y1="0" x2="10.0034" y2="20" gradientUnits="userSpaceOnUse">
+                            <stop offset="1" stop-color="#3B31C8"/>
+                            <stop offset="1" stop-color="#4C40DF"/>
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_580_105" x1="10.2993" y1="-1.30435" x2="21.6031" y2="11.1057" gradientUnits="userSpaceOnUse">
+                            <stop offset="1" stop-color="#555D64"/>
+                            <stop offset="1" stop-color="#292C2E"/>
+                            </linearGradient>
+                            <linearGradient id="paint3_linear_580_105" x1="10.0034" y1="0" x2="10.0034" y2="20" gradientUnits="userSpaceOnUse">
+                            <stop offset="1" stop-color="#3B31C8"/>
+                            <stop offset="1" stop-color="#4C40DF"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                        Powered by Closer Engine
+                    </div>
+                    <div class="title text-display-2 effectFade fadeRotateX">
+                        <span class="title1 fw-semibold text-gradient-1">Close More Deals With AI That</span>
+                        <br>
+                        <div class="title2 d-flex gap-20 justify-content-center flex-wrap">
+                            <span class="fw-semibold text-gradient-1">Knows Your Pipeline</span>
+                            <div class="title-icon">
+                                <div class="box"></div>
+                                <div class="title-icon-wrap">
+                                    <img class="img-1 img-transform-3" src="assets/images/item/hero-1.svg" alt="">
+                                    <img class="img-2 img-transform-3" src="assets/images/item/hero-2.svg" alt="">
+                                    <img class="img-3 img-transform-3" src="assets/images/item/hero-3.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text effectFade fadeUp">
+                        Ropter connects to your CRM, scores every deal in real time,<br>
+                        flags risks before they cost you revenue, and tells your reps exactly where to focus.
+                    </p>
+                    <div class="bot-btns effectFade fadeRotateX">
+                        <a href="#contact" class="tf-btn">
+                            Request Demo
+                        </a>
+                        <a href="#contact" class="tf-btn-2">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-more">
+                <span class="fw-semibold link1">Scroll for more</span>
+                <i class="icon icon-long-arrow-alt-down-solid"></i>
+            </a>
+        </div>
+        <!-- /Hero Banner -->
+        <!-- section-about-us -->
+        <div class="section-about-us flat-spacing" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="heading-section">
+                            <div class="heading-sub fw-semibold effectFade fadeUp">About Ropter</div>
+                            <div class="heading-title text-gradient-2 effectFade fadeRotateX">Built for Sales Teams</div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-7 col-lg-6 lg-mb-24">
+                        <div class="col-left">
+                            <div class="position-relative z-5">
+                                <div class="sub text-white">
+                                    <span class="dot"></span>
+                                    Works with various CRMs
+                                </div>
+                                <h5 class="title fw-semibold text-white">Built in the <span class="text-brand-light">Cloud.</span> Works Where You Sell.</h5>
+                                <a href="https://app.ropter.io" class="tf-btn" target="_blank">
+                                    Request a Demo
+                                </a>
+                            </div>
+                            <img class="effectFade fadeRotateX" src="assets/images/item/earth.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xxl-5 col-lg-6">
+                        <div class="review-box mb-24">
+                            <div class="desc fw-semibold text-body-1">Trusted by sales teams across the country — real-time AI deal intelligence from day one.</div>
+                            <div class="d-flex justify-content-between flex-wrap align-items-end gap-12">
+                                <div class="counter text-neutral-200">
+                                    <span class="number" data-speed="1500" data-to="50" data-inviewport="yes">0</span><span>+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-quotes effectFade fadeRotateX">
+                            <div class="image ">
+                                <img src="assets/images/section/quotes-1.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="icon mb-8">
+                                    <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#E4E4E7"/>
+                                    </svg>
+                                </div>
+                                <div class="text-body-1 fw-semibold desc">The moment Ropter flagged our at-risk deals, our close rate jumped. It pays for itself.</div>
+                                <div class="cite">
+                                    <div class="name text-body-3 fw-semibold">Rahul K.</div>
+                                    <div class="line"></div>
+                                    <div class="sub text-body-3">Sales Manager</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-about-us -->
+        <!-- section-partner -->
+        <div class="section-partner" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="partner-wrap">
+                            <p class="text-secondary text fw-semibold">Trusted by 100+ <br> top-tier brands</p>
+                            <div class="infiniteSlide_tech_main d-grid">
+                                <div class="infiniteSlide infiniteSlide_partner" data-clone="5">
+                                    <img src="assets/images/partner/partner-1.svg" alt="">
+                                    <img src="assets/images/partner/partner-2.svg" alt="">
+                                    <img src="assets/images/partner/partner-3.svg" alt="">
+                                    <img src="assets/images/partner/partner-4.svg" alt="">
+                                    <img src="assets/images/partner/partner-5.svg" alt="">
+                                    <img src="assets/images/partner/partner-6.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-partner -->
+
+        <div class="box-white">
+            <!-- section-services -->
+            <div id="services" class="section-services flat-spacing">
+                <style>
+                    #services .list-tags a:hover {
+                        color: #A8A4F5;
+                    }
+                </style>
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xxl-4 col-lg-6">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <div class="col-left">
+                                    <div class="heading-section mb-48">
+                                        <div class="heading-sub fw-semibold effectFade fadeUp">Features</div>
+                                        <div class="heading-title text-gradient-3 effectFade fadeRotateX">Everything Your Sales Team Needs to Win</div>
+                                    </div>
+                                    <p class="effectFade fadeUp">Ropter plugs into your CRM and gives every rep, manager, and AE the AI intelligence they need — without changing how they work.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-lg-6">
+                            <div class="accordion-faq_list" id="accordion-services">
+                                <div class="accordion-faq_item effectFade fadeUp" role="presentation">
+                                    <div class="accordion-action services-image-btn active-img" data-img="assets/images/section/service-1.jpg" data-bs-target="#faq-1" role="button"
+                                        data-bs-toggle="collapse" aria-controls="faq-1" aria-expanded="true">
+                                        <div class="accordion-title">
+                                            Deal Health Scoring
+                                            <div class="text-body-1 num">(01)</div>
+                                        </div>
+                                    </div>
+                                    <div id="faq-1" class="collapse show" data-bs-parent="#accordion-services">
+                                        <div class="accordion-content">
+                                            <div class="text-body-3 text-neutral-300 text">Every deal gets a live health score based on activity, engagement, and pipeline stage progression.</div>
+                                            <div class="list-tags">
+                                                <a href="#" class="tags-item fw-semibold">Real-time scoring</a>
+                                                <a href="#" class="tags-item fw-semibold">Risk signals</a>
+                                                <a href="#" class="tags-item fw-semibold">Stage analysis</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-faq_item effectFade fadeUp" role="presentation">
+                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-2.jpg" data-bs-target="#faq-2" role="button"
+                                        data-bs-toggle="collapse" aria-controls="faq-2" aria-expanded="false">
+                                        <div class="accordion-title">
+                                            Risk Flag Detection
+                                            <div class="text-body-1 num">(02)</div>
+                                        </div>
+                                    </div>
+                                    <div id="faq-2" class="collapse" data-bs-parent="#accordion-services">
+                                        <div class="accordion-content">
+                                            <div class="text-body-3 text-neutral-300 text">Ropter surfaces stalled deals, silent prospects, and rep blind spots before they cost you revenue.</div>
+                                            <div class="list-tags">
+                                                <a href="#" class="tags-item fw-semibold">Stall detection</a>
+                                                <a href="#" class="tags-item fw-semibold">Inactivity alerts</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-faq_item effectFade fadeUp" role="presentation">
+                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-3.jpg" data-bs-target="#faq-3" role="button"
+                                        data-bs-toggle="collapse" aria-controls="faq-3" aria-expanded="false">
+                                        <div class="accordion-title">
+                                            Rep Performance Coaching
+                                            <div class="text-body-1 num">(03)</div>
+                                        </div>
+                                    </div>
+                                    <div id="faq-3" class="collapse" data-bs-parent="#accordion-services">
+                                        <div class="accordion-content">
+                                            <div class="text-body-3 text-neutral-300 text">AI-generated coaching notes posted directly to your CRM after every deal interaction.</div>
+                                            <div class="list-tags">
+                                                <a href="#" class="tags-item fw-semibold">Behavior analysis</a>
+                                                <a href="#" class="tags-item fw-semibold">CRM notes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-faq_item effectFade fadeUp" role="presentation">
+                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-4.jpg" data-bs-target="#faq-4" role="button"
+                                        data-bs-toggle="collapse" aria-controls="faq-4" aria-expanded="false">
+                                        <div class="accordion-title">
+                                            Pipeline Intelligence
+                                            <div class="text-body-1 num">(04)</div>
+                                        </div>
+                                    </div>
+                                    <div id="faq-4" class="collapse" data-bs-parent="#accordion-services">
+                                        <div class="accordion-content">
+                                            <div class="text-body-3 text-neutral-300 text">Full pipeline visibility with AI summaries — know exactly where your quarter is heading.</div>
+                                            <div class="list-tags">
+                                                <a href="#" class="tags-item fw-semibold">Forecast signals</a>
+                                                <a href="#" class="tags-item fw-semibold">Manager view</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-image effectFade fadeUp">
+                            <img src="assets/images/section/service-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-services -->
+            <!-- section-process -->
+            <div class="section-process flat-spacing pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="process-heading h-100">
+                                <div class="heading-section mb-80">
+                                    <div class="heading-sub fw-semibold effectFade fadeUp">How It Works</div>
+                                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">Up and Running in Minutes</div>
+                                </div>
+                                <div class="group-btn-slider">
+                                    <div class="nav-prev-swiper">
+                                        <i class="icon icon-angle-left-solid"></i>
+                                    </div>
+                                    <div class="nav-next-swiper">
+                                        <i class="icon icon-angle-right-solid"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="process-slide">
+                                <div dir="ltr" class="swiper tf-swiper swiper-box-shadow" data-preview="1.78" data-tablet="2" data-mobile-sm="1" data-mobile="1"
+                                    data-loop="false" data-center="false" data-space-lg="24" data-space-md="24" data-space="30" >
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="process-card">
+                                                <i class="icon icon-plug-solid"></i>
+                                                <div class="content">
+                                                    <h4 class="title fw-semibold">Connect Your CRM</h4>
+                                                    <p class="text text-secondary">Link Ropter to your Pipedrive in minutes — no engineering, no setup calls, no IT required.</p>
+                                                </div>
+                                                <div class="bot">
+                                                    <div class="time fw-semibold">5 MINUTES</div>
+                                                    <div class="number">
+                                                        <span class="text-neutral-400">01</span>
+                                                        <span class="text-neutral-200">/03</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="process-card">
+                                                <i class="icon icon-bolt-solid"></i>
+                                                <div class="content">
+                                                    <h4 class="title fw-semibold">AI Scans Your Pipeline</h4>
+                                                    <p class="text text-secondary">Closer Engine analyzes your deals, activities, and rep behavior automatically.</p>
+                                                </div>
+                                                <div class="bot">
+                                                    <div class="time fw-semibold">INSTANT</div>
+                                                    <div class="number">
+                                                        <span class="text-neutral-400">02</span>
+                                                        <span class="text-neutral-200">/03</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="process-card">
+                                                <i class="icon icon-bolt-solid"></i>
+                                                <div class="content">
+                                                    <h4 class="title fw-semibold">Get Actionable Intelligence</h4>
+                                                    <p class="text text-secondary">Risk flags, health scores, and rep coaching notes appear directly inside your CRM where your team already works.</p>
+                                                </div>
+                                                <div class="bot">
+                                                    <div class="time fw-semibold">ONGOING</div>
+                                                    <div class="number">
+                                                        <span class="text-neutral-400">03</span>
+                                                        <span class="text-neutral-200">/03</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-process -->
+            <!-- section-benefits -->
+            <div class="section-benefits flat-spacing pt-0">
+                <div class="container">
+                    <div class="heading-section center mb-70">
+                        <div class="heading-sub fw-semibold effectFade fadeUp">Benefits</div>
+                        <div class="heading-title text-gradient-3 effectFade fadeRotateX">Why Sales Teams Choose Ropter</div>
+                    </div>
+                    <div class="row mb-24">
+                        <div class="col-lg-7">
+                            <div class="benefits-box benefits-progress">
+                                <div class="benefits-progress-inner">
+                                    <div class="benefits-progress-item">
+                                        <div class="progress-line" data-progress="60" style="max-width: 80%;"></div>
+                                        <div class="progress-text fw-semibold" style="white-space: nowrap;">
+                                            <i class="icon icon-tachometer-alt-solid"></i>
+                                            Activity-based
+                                        </div>
+                                    </div>
+                                    <div class="benefits-progress-item">
+                                        <div class="progress-line" data-progress="100" style="max-width: 80%;"></div>
+                                        <div class="progress-text fw-semibold" style="white-space: nowrap;">
+                                            <i class="icon icon-chart-line-solid"></i>
+                                            Stage signals
+                                        </div>
+                                    </div>
+                                    <div class="benefits-progress-item">
+                                        <div class="progress-line" data-progress="40" style="max-width: 80%;"></div>
+                                        <div class="progress-text fw-semibold" style="white-space: nowrap;">
+                                            <i class="icon icon-envelope-solid"></i>
+                                            Email tracking
+                                        </div>
+                                    </div>
+                                    <div class="benefits-progress-item">
+                                        <div class="progress-line" data-progress="80" style="max-width: 80%;"></div>
+                                        <div class="progress-text fw-semibold" style="white-space: nowrap;">
+                                            <i class="icon icon-check-solid"></i>
+                                            Not guesswork
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h6 class="fw-semibold title">Real Deals, Real Signals</h6>
+                                    <p class="text text-secondary">We score based on actual CRM activity — calls, emails, and stage movement — not gut feeling or guesswork.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="benefits-box benefits-step effectFade fadeUp">
+                                <div class="benefits-step-inner">
+                                    <div class="line-step"></div>
+                                    <div class="step-item">
+                                        <i class="icon icon-check-solid"></i>
+                                    </div>
+                                    <div class="step-item">
+                                        <i class="icon icon-check-solid"></i>
+                                    </div>
+                                    <div class="step-item">
+                                        <i class="icon icon-check-solid"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h6 class="fw-semibold title">Always Up to Date</h6>
+                                    <p class="text text-secondary">Every time your team logs activity, Ropter re-analyzes automatically. No manual refreshes, no stale data.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="benefits-box benefits-secure ">
+                                <div class="benefits-secure-inner text-center">
+                                    <img src="assets/images/item/benefits-1.svg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h6 class="fw-semibold title">Secure by Design</h6>
+                                    <p class="text text-secondary">Enterprise-minded security. Your CRM data is encrypted in transit and at rest — built with privacy and safety in mind from day one.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="benefits-box benefits-design">
+                                <div class="benefits-design-inner">
+                                    <img class="item-img-1" src="assets/images/item/benefits-2.svg" alt="">
+                                    <img class="item-img-2 rightleft" src="assets/images/item/benefits-3.png" alt="">
+                                    <img class="item-img-3 updown" src="assets/images/item/benefits-4.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h6 class="fw-semibold title">Works How Your Team Works</h6>
+                                    <p class="text text-secondary">Built to fit into your workflow, not fight it.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-benefits -->
+            <!-- section-features -->
+            <div class="section-features flat-spacing pt-0">
+                <div class="container">
+                    <div class="heading-section center mb-64">
+                        <div class="heading-sub fw-semibold effectFade fadeUp">Features</div>
+                        <div class="heading-title text-gradient-3 effectFade fadeRotateX">Everything in One Intelligent Layer</div>
+                    </div>
+                </div>
+                <div class="position-relative">
+                    <div class="container z-5">
+                        <div class="features-wrap justify-content-between">
+                            <div class="features-col col-left lg-mb-24">
+                                <div class="features-item effectFade fadeUp">
+                                    <i class="icon icon-robot-solid"></i>
+                                    <h6 class="title fw-semibold">Real-Time Deal Scoring</h6>
+                                    <p class="text-secondary">
+                                        Every deal in your pipeline gets a live health score — updated automatically as your team works.
+                                    </p>
+                                </div>
+                                <div class="features-item effectFade fadeUp">
+                                    <i class="icon icon-clipboard-check-solid"></i>
+                                    <h6 class="title fw-semibold">Rep Coaching Notes</h6>
+                                    <p class="text-secondary">
+                                        AI-written coaching notes posted directly to your CRM after every deal interaction.
+                                    </p>
+                                </div>
+                                <div class="features-item effectFade fadeUp">
+                                    <i class="icon icon-book-solid"></i>
+                                    <h6 class="title fw-semibold">SDR to AE Handoff</h6>
+                                    <p class="text-secondary">
+                                        Structured handoff workflow built into your pipeline — no leads fall through the cracks.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="features-center flex-shrink">
+                                <img src="assets/images/logo/logo-1.svg" alt="" style="width: 60%; height: auto; object-fit: contain; display: block; margin: 0 auto;">
+                            </div>
+                            <div class="features-col col-right">
+                                <div class="features-item effectFade fadeUp" data-delay="0.1">
+                                    <i class="icon icon-user-check-solid"></i>
+                                    <h6 class="title fw-semibold">Risk Flag Detection</h6>
+                                    <p class="text-secondary">
+                                        Stalled deals and unresponsive prospects flagged before they cost you the quarter.
+                                    </p>
+                                </div>
+                                <div class="features-item effectFade fadeUp" data-delay="0.1">
+                                    <i class="icon icon-shield-alt-solid"></i>
+                                    <h6 class="title fw-semibold">Secure by Design</h6>
+                                    <p class="text-secondary">
+                                        Your CRM data encrypted in transit and at rest — enterprise-minded from day one.
+                                    </p>
+                                </div>
+                                <div class="features-item effectFade fadeUp" data-delay="0.1">
+                                    <i class="icon icon-plug-solid"></i>
+                                    <h6 class="title fw-semibold">CRM-Native Intelligence</h6>
+                                    <p class="text-secondary">
+                                        Works inside your CRM — no new tabs, no context switching, no behavior change required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-line-main d-none d-lg-block wow fadeIn">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 mx-auto">
+                                    <div class="side-line-wrap">
+                                        <div class="link-break-line left">
+                                            <div class="link-break-line">
+                                                <span class="item top"></span>
+                                                <span class="item bottom"></span>
+                                            </div>
+                                        </div>
+                                        <div class="link-break-center">
+                                            <span class="simu-electric left"></span>
+                                            <span class="simu-electric right"></span>
+                                        </div>
+                                        <div class="link-break-line right">
+                                            <span class="item top"></span>
+                                            <span class="item bottom"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-features -->
+        </div>
+        
+        <!-- section-tools -->
+        <div class="section-tools flat-spacing" style="display: none;">
+            <img class="img-1 img-grow-1" src="assets/images/item/item-4.svg" alt="">
+            <img class="img-2 img-grow-2" src="assets/images/item/item-5.svg" alt="">
+            <img class="img-3 img-grow-3" src="assets/images/item/item-6.svg" alt="">
+            <img class="img-4 img-grow-4" src="assets/images/item/item-7.svg" alt="">
+            <img class="img-5 img-grow-5" src="assets/images/item/item-8.svg" alt="">
+            <img class="img-6 img-grow-6" src="assets/images/item/item-9.svg" alt="">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-md-8 text-center">
+                        <div class="heading-section center mb-48">
+                            <div class="heading-sub fw-semibold effectFade fadeUp">Tools</div>
+                            <div class="heading-title text-gradient-3 effectFade fadeRotateX">We work with powerful AI tools</div>
+                        </div>
+                        <div class="text effectFade fadeUp">
+                            We design, build, and evaluate with a modern AI stack—LLMs, vector search, orchestration, and observability—so your features are fast, reliable, and secure.
+                        </div>
+                        <a href="contact.html" class="tf-btn effectFade fadeRotateX">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-tools -->
+
+        <div class="box-black">
+            <div class="light-box"></div>
+            <img class="light-top" src="assets/images/item/light-top.png" alt="">
+            <img class="light-bot" src="assets/images/item/light-bot.png" alt="">
+            
+            <!-- section-team -->
+            <div class="section-team flat-spacing" style="display: none;">
+                <div class="container">
+                    <div class="heading-section center mb-64">
+                        <div class="heading-sub fw-semibold style-1 effectFade fadeUp">Team Members</div>
+                        <div class="heading-title text-white effectFade fadeRotateX">The Squad Shipping <br> Your AI</div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-8 lg-mb-24">
+                            <div class="team-item h-100 effectFade fadeUp">
+                                <div class="image">
+                                    <img src="assets/images/team/team-1.jpg" alt="">
+                                </div>
+                                <a href="#" class="name h6 fw-semibold">Ava Collins</a>
+                                <div class="sub text-body-1">Aigocy’s Design Lead</div>
+                                <div class="tf-social justify-content-center">
+                                    <a href="#" class="social-item">
+                                        <i class="icon icon-twitter-x"></i>
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <i class="icon icon-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <i class="icon icon-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 lg-mb-24">
+                            <div class="team-item style-1 mb-24 effectFade fadeUp">
+                                <div class="top">
+                                    <div class="image">
+                                        <img src="assets/images/team/team-2.jpg" alt="">
+                                    </div>
+                                    <div class="tf-social justify-content-center">
+                                        <a href="#" class="social-item">
+                                            <i class="icon icon-github"></i>
+                                        </a>
+                                        <a href="#" class="social-item">
+                                            <i class="icon icon-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="#" class="name text-body-1 fw-semibold">Noah Reed</a>
+                                <div class="sub">ML/Agent Lead. Builds domain agents</div>
+                            </div>
+                            <div class="team-item style-1 effectFade fadeUp">
+                                <div class="top">
+                                    <div class="image">
+                                        <img src="assets/images/team/team-3.jpg" alt="">
+                                    </div>
+                                    <div class="tf-social justify-content-center">
+                                        <a href="#" class="social-item">
+                                            <i class="icon icon-github"></i>
+                                        </a>
+                                        <a href="#" class="social-item">
+                                            <i class="icon icon-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="#" class="name text-body-1 fw-semibold">Lucas Hayes</a>
+                                <div class="sub">Solutions Architect. Connects AI to your stack</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="team-item style-1 mb-24 effectFade fadeUp" data-delay="0.1">
+                                <div class="top">
+                                    <div class="image">
+                                        <img src="assets/images/team/team-4.jpg" alt="">
+                                    </div>
+                                    <div class="tf-social justify-content-center">
+                                        <a href="#" class="social-item">
+                                            <i class="icon icon-github"></i>
+                                        </a>
+                                        <a href="#" class="social-item">
+                                            <i class="icon icon-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="#" class="name text-body-1 fw-semibold">Jordan Brooks</a>
+                                <div class="sub">Data Engineer. Secure access policies</div>
+                            </div>
+                            <div class="team-item style-1 effectFade fadeUp" data-delay="0.1">
+                                <div class="top">
+                                    <div class="image">
+                                        <img src="assets/images/team/team-5.jpg" alt="">
+                                    </div>
+                                    <div class="tf-social justify-content-center">
+                                        <a href="#" class="social-item">
+                                            <i class="icon icon-github"></i>
+                                        </a>
+                                        <a href="#" class="social-item">
+                                            <i class="icon icon-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a href="#" class="name text-body-1 fw-semibold">Erin Park</a>
+                                <div class="sub">MLOps Engineer. Productionizes with CI/CD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-team -->
+            <!-- section-statistic -->
+            <div class="section-statistic" style="display: none;">
+                <div class="line"></div>
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-6">
+                            <div class="heading-section mb-48">
+                                <div class="heading-sub fw-semibold style-1 effectFade fadeUp">Statistic</div>
+                                <div class="heading-title text-white effectFade fadeRotateX">Human-centered <br> AI, built for <br> production</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="statistic-slider">
+                                <div class="text text-body-1 text-neutral-400 effectFade fadeUp">
+                                    We shipped our first copilot in 7 weeks and cut support tickets by 31%. The eval dashboards made every decision obvious.
+                                </div>
+                                <div class="swiper swiper-progressbar">
+                                    <div class="group-slider effectFade fadeUp">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" id="progressBar"></div>
+                                        </div>
+                                        <div class="group-btn-slider">
+                                            <div class="btn-slider progressbar-prev">
+                                                <i class="icon icon-angle-left-solid"></i>
+                                            </div>
+                                            <div class="btn-slider progressbar-next">
+                                                <i class="icon icon-angle-right-solid"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-wrapper effectFade fadeUp">
+                                        <div class="swiper-slide">
+                                            <div class="title fw-semibold text-body-1">OUR GROWTH</div>
+                                            <div class="statistic-number">
+                                                <span class="number text-white fw-semibold">230</span>
+                                                <span class="prefix text-brand">K</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="title fw-semibold text-body-1">UPTIME FOR KEY FLOWS</div>
+                                            <div class="statistic-number">
+                                                <span class="number text-white fw-semibold">95</span>
+                                                <span class="prefix text-brand">%</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="title fw-semibold text-body-1">ON TIME DELIVERY</div>
+                                            <div class="statistic-number">
+                                                <span class="number text-white fw-semibold">99</span>
+                                                <span class="prefix text-brand">%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-statistic -->
+            <!-- section-awards -->
+            <div class="section-awards flat-spacing" style="display: none;">
+                <div class="container">
+                    <div class="heading-section center mb-48">
+                        <div class="heading-sub fw-semibold style-1 mb-0 effectFade fadeUp">Awards</div>
+                    </div>
+                    <div class="d-grid gap-16">
+                        <div class="awards-item effectFade fadeUp">
+                            <div class="image">
+                                <img src="assets/images/partner/partner-7.svg" alt="">
+                            </div>
+                            <div class="title text-body-1 text-white">Innovation in AI</div>
+                            <div class="text text-body-1 text-white">Underwriting Risk Copilot (Fintech)</div>
+                            <div class="year text-body-1 text-neutral-400">/ 2025</div>
+                        </div>
+                        <div class="awards-item effectFade fadeUp" data-delay="0.1">
+                            <div class="image">
+                                <img src="assets/images/partner/partner-8.svg" alt="">
+                            </div>
+                            <div class="title text-body-1 text-white">Best AI Product Design</div>
+                            <div class="text text-body-1 text-white">Support Copilot (SaaS)</div>
+                            <div class="year text-body-1 text-neutral-400">/ 2025</div>
+                        </div>
+                        <div class="awards-item effectFade fadeUp" data-delay="0.2">
+                            <div class="image">
+                                <img src="assets/images/partner/partner-9.svg" alt="">
+                            </div>
+                            <div class="title text-body-1 text-white">Data & AI Excellence</div>
+                            <div class="text text-body-1 text-white">Clinical Note Summarizer (Healthcare)</div>
+                            <div class="year text-body-1 text-neutral-400">/ 2024</div>
+                        </div>
+                        <div class="awards-item effectFade fadeUp" data-delay="0.3">
+                            <div class="image">
+                                <img src="assets/images/partner/partner-10.svg" alt="">
+                            </div>
+                            <div class="title text-body-1 text-white">Innovation in AI</div>
+                            <div class="text text-body-1 text-white">Underwriting Risk Copilot (Fintech)</div>
+                            <div class="year text-body-1 text-neutral-400">/ 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-awards -->
+            <!-- section-testimonials -->
+            <div class="section-testimonials flat-spacing pt-0" style="display: none;">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-5">
+                            <div class="col-left">
+                                <div class="heading-section mb-48">
+                                    <div class="heading-sub fw-semibold style-1 effectFade fadeUp">Testimonials</div>
+                                    <div class="heading-title text-white effectFade fadeRotateX">What Our <br> Clients Says</div>
+                                </div>
+                                <div class="swiper-testimonial_wrap effectFade fadeUp">
+                                    <div dir="ltr" class="swiper tf-swiper swiper-testimonial">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div>
+                                                    <div class="top-icon d-flex gap-4">
+                                                        <i class="icon icon-star-solid"></i>
+                                                        <i class="icon icon-star-solid"></i>
+                                                        <i class="icon icon-star-solid"></i>
+                                                        <i class="icon icon-star-solid"></i>
+                                                        <i class="icon icon-star-solid"></i>
+                                                    </div>
+                                                    <div class="text-body-1 text-white desc">
+                                                        We shipped our first copilot in 7 weeks and cut support tickets by 31%. The eval dashboards made every decision obvious.
+                                                    </div>
+                                                    <div class="cite">
+                                                        <img class="line-left" src="assets/images/item/line-1.png" alt="">
+                                                        <div class="name text-body-3 text-neutral-400 fw-semibold">Elena Ruiz</div>
+                                                        <div class="line"></div>
+                                                        <div class="sub text-body-3 text-neutral-400">Cantos SaaS’s VP Product</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div>
+                                                    <div class="top-icon">
+                                                        <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#4C40DF"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-body-1 text-white desc">
+                                                        SSO/SAML and RBAC landed smoothly. Latency stayed &lt;300 ms on p95—huge win for our agents.
+                                                    </div>
+                                                    <div class="cite">
+                                                        <img class="line-left" src="assets/images/item/line-1.png" alt="">
+                                                        <div class="name text-body-3 text-neutral-400 fw-semibold">Marcus Tan</div>
+                                                        <div class="line"></div>
+                                                        <div class="sub text-body-3 text-neutral-400">VectorPay’s CTO</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div>
+                                                    <div class="top-icon">
+                                                        <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#4C40DF"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-body-1 text-white desc">
+                                                        The best partner for agentic work. Multi-step planning, tool use, and audit trails—done right the first time.
+                                                    </div>
+                                                    <div class="cite">
+                                                        <img class="line-left" src="assets/images/item/line-1.png" alt="">
+                                                        <div class="name text-body-3 text-neutral-400 fw-semibold">David Kim</div>
+                                                        <div class="line"></div>
+                                                        <div class="sub text-body-3 text-neutral-400">Northway's Ecommerce Director</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="group-slider">
+                                        <div class="group-btn-slider">
+                                            <div class="btn-slider nav-prev-swiper testimonials-prev">
+                                                <i class="icon icon-angle-left-solid"></i>
+                                            </div>
+                                            <div class="btn-slider nav-next-swiper testimonials-next">
+                                                <i class="icon icon-angle-right-solid"></i>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div dir="ltr" class="swiper sw-main-image effectFade fadeUp">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-image">
+                                            <img src="assets/images/section/tes-1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-image">
+                                            <img src="assets/images/section/tes-2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-image">
+                                            <img src="assets/images/section/tes-3.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-testimonials -->
+        </div>
+
+        <!-- section-pricing -->
+        <div id="pricing" class="section-pricing flat-spacing" style="display: none;">
+            <div class="container">
+                <div class="heading-section mb-80">
+                    <div class="heading-sub fw-semibold effectFade fadeUp">Pricing Plans</div>
+                    <div class="heading-title text-gradient-3 gap-8 effectFade fadeRotateX">
+                        From pilot to enterprise <br>
+                        <div class="h-8 d-none d-lg-block"></div>
+                        clear scope, transparent costs <br>
+                        <div class="h-8 d-none d-lg-block"></div>
+                        <input type="checkbox" id="pricingSwitch" class="tf-switch-check" checked>&nbsp;annually.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 lg-mb-24">
+                        <div class="pricing-item h-100 effectFade fadeRotateX">
+                            <div class="top d-flex gap-12 align-items-center">
+                                <div class="d-flex gap-8 align-items-center">
+                                    <i class="icon icon-user-friends-solid fs-24"></i>
+                                    <div class="fw-semibold text">Starter Plan</div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fw-semibold text-secondary">For startups</div>
+                            </div>
+                            <div class="heading">
+                                <div class="d-flex gap-14 align-items-end">
+                                    <div class="price-number fw-bold" data-month="1000" data-year="9900">$9,900</div>
+                                    <h6 class="price-per">/ year</h6>
+                                </div>
+                                <a href="contact.html" class="tf-btn">
+                                    Get Started
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <div>
+                                    <div class="title fw-semibold mb-4">What’s included</div>
+                                    <div class="text fw-semibold">
+                                        Prove value in two weeks with a clickable UX, tech spike, and a clear go/no-go roadmap.
+                                    </div>
+                                </div>
+                                <ul class="list-text type-check">
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Discovery workshop
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Opportunity brief
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Clickable UX
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        1 data source & 1 integration
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pricing-item h-100 style-black effectFade fadeRotateX" data-delay="0.1">
+                            <div class="top d-flex gap-12 align-items-center">
+                                <div class="d-flex gap-8 align-items-center">
+                                    <i class="icon icon-building fs-24"></i>
+                                    <div class="fw-semibold text">Enterprise Plan</div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fw-semibold text-neutral-400">For organisations</div>
+                            </div>
+                            <div class="heading">
+                                <div class="d-flex gap-14 align-items-end">
+                                    <div class="price-number fw-bold" data-month="1700" data-year="19900">$19,900</div>
+                                    <h6 class="price-per">/ year</h6>
+                                </div>
+                                <a href="contact.html" class="tf-btn">
+                                    Get Started
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <div>
+                                    <div class="title fw-semibold mb-4">What’s included</div>
+                                    <div class="text fw-semibold">
+                                        Compliance-ready delivery for complex orgs—multi-env releases, canaries, and change management.
+                                    </div>
+                                </div>
+                                <ul class="list-text type-check">
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Everything in Starter
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        CI/CD, tracing, alerts, guardrails
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Full eval dashboard
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        3 data source & 3 integration
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-pricing -->
+
+        <!-- section-faqs -->
+        <div class="section-faqs flat-spacing pt-0">
+            <div class="container">
+                <div class="heading-section center mb-64">
+                    <div class="heading-sub fw-semibold effectFade fadeUp">FAQs</div>
+                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">
+                        Frequently Asked <br>Questions
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion-asked" id="accordion-asked">
+                            <div class="accordion-asked-item effectFade fadeRotateX">
+                                <div class="accordion-asked-title" id="asked1">
+                                    <button class="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        Does Ropter work with my CRM?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse1" role="region" class="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        Ropter currently integrates natively with Pipedrive, with more CRM integrations on the way.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
+                                <div class="accordion-asked-title" id="asked2">
+                                    <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        How long does setup take?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse2" role="region" class="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        Most teams are up and running in under 10 minutes — just connect your Pipedrive account and Ropter starts analyzing immediately.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
+                                <div class="accordion-asked-title" id="asked3">
+                                    <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        Does my team need to change how they work?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse3" role="region" class="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        No. Ropter works in the background and surfaces insights directly inside your CRM as native notes.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
+                                <div class="accordion-asked-title" id="asked4">
+                                    <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        Is my CRM data secure?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse4" role="region" class="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        Yes. All data is secure. Ropter never stores your deal data beyond what is needed for analysis.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-faqs -->
+        <!-- section-contact -->
+        <div id="contact" class="flat-spacing pt-0">
+            <style>
+                #contact .form-contact .tf-btn-contact-demo {
+                    background: #4C40DF;
+                    color: #fff;
+                    box-shadow: 0 8px 24px rgba(76, 64, 223, 0.35);
+                }
+                #contact .form-contact .tf-btn-contact-demo:hover {
+                    background: #3B31C8;
+                    color: #fff;
+                    box-shadow: 0 8px 32px rgba(76, 64, 223, 0.5);
+                }
+            </style>
+            <div class="section-contact">
+                <div class="contact-image">
+                    <img src="assets/images/section/contact-image-bg.jpg" alt="">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="col-left">
+                                <div class="heading-section mb-48">
+                                    <div class="heading-sub fw-semibold effectFade fadeUp">Contact</div>
+                                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">
+                                        Close More Deals. <br> Start Here.
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="contact-item mb-20 effectFade fadeRotateX">
+                                        <i class="icon icon-envelope-solid"></i>
+                                        <div class="content">
+                                            <div class="title fw-semibold mb-2">E-mail address</div>
+                                            <div class="text">hello@ropter.io</div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item effectFade fadeRotateX" data-delay="0.1">
+                                        <i class="icon icon-headset-solid"></i>
+                                        <div class="content">
+                                            <div class="title fw-semibold mb-2">Phone number</div>
+                                            <div class="text">+91 6364-449349</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <form id="demo-request-form" class="form-contact effectFade fadeUp" action="https://formspree.io/f/mpqoelwb" method="POST">
+                                <input type="hidden" name="_subject" value="New Demo Request — Ropter">
+                                <input type="hidden" name="_next" value="https://ropter.io/thank-you.html">
+                                <input type="text" name="_gotcha" style="display:none">
+                                <h4 class="heading fw-semibold">Request a Demo</h4>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px;">
+                                    <fieldset class="mb-21">
+                                        <label class="fw-semibold text-body-3 mb-20">Your Name</label>
+                                        <input class="" type="text" name="name" placeholder="Enter your full name" required>
+                                    </fieldset>
+                                    <fieldset class="mb-21">
+                                        <label class="fw-semibold text-body-3 mb-20">Contact Number</label>
+                                        <input class="" type="tel" name="phone" placeholder="Enter your phone number" required>
+                                    </fieldset>
+                                    <fieldset class="mb-21">
+                                        <label class="fw-semibold text-body-3 mb-20">Email Address</label>
+                                        <input class="" type="email" name="email" placeholder="Enter your email address" required>
+                                    </fieldset>
+                                    <fieldset class="mb-21">
+                                        <label class="fw-semibold text-body-3 mb-20">Sales Team Size</label>
+                                        <input class="" type="text" name="team_size" placeholder="e.g. 5-10 reps" required>
+                                    </fieldset>
+                                    <fieldset class="mb-21" style="grid-column: 1 / -1;">
+                                        <label class="fw-semibold text-body-3 mb-20">Company Name</label>
+                                        <input class="" type="text" name="company" placeholder="Enter your company name" required>
+                                    </fieldset>
+                                    <fieldset class="mb-18" style="grid-column: 1 / -1;">
+                                        <label class="fw-semibold text-body-3 mb-0">Anything you'd like us to know?</label>
+                                        <textarea name="message" class="" placeholder="Optional — share any context about your pipeline or team"></textarea>
+                                    </fieldset>
+                                </div>
+                                <button type="submit" class="tf-btn w-100 tf-btn-contact-demo">Request a Demo</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-contact -->
+        <!-- footer -->
+        <footer>
+            <div class="footer-image">
+                <img class="effectFade fadeUp" src="assets/images/logo/logo-footer.png" alt="">
+            </div>
+            <div class="container">
+                <div class="footer-content">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/images/logo/Ropter_Horizontal_Logo_Transparent.png" alt="Ropter" style="height: 48px; width: auto;">
+                    </a>
+                    <div class="title h6 fw-semibold">Follow Ropter on LinkedIn</div>
+                    <div class="text">Sales intelligence insights, product updates, and pipeline tips — delivered to your feed.</div>
+                    <div class="tf-social-1 justify-content-center">
+                        <a href="https://www.linkedin.com/company/ropter" target="_blank" class="text-body-1 fw-semibold">
+                            LinkedIn
+                            <div class="social-item">
+                                <i class="icon icon-linkedin-in"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <ul class="footer-links d-flex gap-24 align-items-center">
+                        <li>
+                            <a href="about.html" class="fw-semibold link-underline link1">About</a>
+                        </li>
+                        <li>
+                            <a href="service.html" class="fw-semibold link-underline link1">Services</a>
+                        </li>
+                        <li>
+                            <a href="work.html" class="fw-semibold link-underline link1">Works</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="fw-semibold link-underline link1">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="text-secondary coppy-rights text-center">© 2026 Ropter. All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+    </main>
+    <!-- /wrapper -->
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas-menu">
+        <div class="offcanvas-content">
+            <div class="container h-100">
+                <div class="offcanvas-content_wrapin">
+                    <div class="canvas_head">
+                        <a href="index.html" class="logo-site">
+                            <i class="icon icon-davies-logo"></i>
+                        </a>
+                        <div class="btn-mobile-menu close-mb-menu text-caption link">
+                            <i class="icon icon-close"></i>
+                            CLOSE
+                        </div>
+                    </div>
+                    <div class="canvas_center">
+                        <ul class="nav-ul-mb" id="mobile-menu">
+                            <li>
+                                <div class="item">
+                                    <a href="about.html" class="mb-menu-link text-display-1">
+                                        <span class="text">About</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <div class="has-sub-menu">
+                                        <a href="#dropdown-menu-1" class="mb-menu-link text-display-1 collapsed" data-bs-toggle="collapse"
+                                            aria-expanded="false" aria-controls="dropdown-menu-1">
+                                            <span class="text">Works</span>
+                                        </a>
+                                        <div id="dropdown-menu-1" class="collapse" data-bs-parent="#mobile-menu">
+                                            <ul class="sub-nav-menu">
+                                                <li><a href="work.html" class="sub-nav-link text-white">Works</a></li>
+                                                <li><a href="work-single.html" class="sub-nav-link text-white">Works Single</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <div class="has-sub-menu">
+                                        <a href="#dropdown-menu-2" class="mb-menu-link text-display-1 collapsed" data-bs-toggle="collapse"
+                                            aria-expanded="false" aria-controls="dropdown-menu-2">
+                                            <span class="text">Services</span>
+                                        </a>
+                                        <div id="dropdown-menu-2" class="collapse" data-bs-parent="#mobile-menu">
+                                            <ul class="sub-nav-menu">
+                                                <li><a href="service.html" class="sub-nav-link text-white">Services</a></li>
+                                                <li><a href="service-single.html" class="sub-nav-link text-white">Services Single</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <div class="has-sub-menu">
+                                        <a href="#dropdown-menu-3" class="mb-menu-link text-display-1 collapsed" data-bs-toggle="collapse"
+                                            aria-expanded="false" aria-controls="dropdown-menu-3">
+                                            <span class="text">Blog</span>
+                                        </a>
+                                        <div id="dropdown-menu-3" class="collapse" data-bs-parent="#mobile-menu">
+                                            <ul class="sub-nav-menu">
+                                                <li><a href="blog-standard.html" class="sub-nav-link text-white">Blog Standard</a></li>
+                                                <li><a href="blog-two-columns.html" class="sub-nav-link text-white">Blog Grid 2</a></li>
+                                                <li><a href="blog-three-columns.html" class="sub-nav-link text-white">Blog Grid 3</a></li>
+                                                <li><a href="blog-single.html" class="sub-nav-link text-white">Blog Single</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="canvas_foot">
+                        <div class="left">
+                            <a href="mailto:aigocy@gmail.com" class="text-caption text-neutral-200">aigocy@gmail.com</a>
+                            <p class="text-caption text-neutral-200">
+                                CUP <span class="clock"></span>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
+                                <i class="icon icon-arrow-top-right"></i>
+                                TWITTER (X)
+                            </a>
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
+                                <i class="icon icon-arrow-top-right"></i>
+                                DRIBBBLE
+                            </a>
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
+                                <i class="icon icon-arrow-top-right"></i>
+                                LINKEDIN
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+    <!-- Javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/countto.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/infinityslide.js"></script>
+    <script src="assets/js/ScrollSmooth.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/gsapAnimation.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        
+    </script>
+
+</body>
+
+</html>
