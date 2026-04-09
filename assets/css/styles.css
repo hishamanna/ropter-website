@@ -1747,7 +1747,8 @@ h6,
 /*--------- Abstracts variable ---------- */
 header {
   position: sticky;
-  z-index: 100;
+  top: 0;
+  z-index: 9999;
   transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 header.header-sticky {
@@ -1799,6 +1800,16 @@ header.header-sticky {
   display: flex;
   align-items: center;
   gap: 24px;
+}
+
+.tf-header .nav-menu-main {
+  gap: 12px;
+}
+.tf-header .nav-menu-main > .menu-item {
+  padding: 0 10px;
+}
+.tf-header .nav-menu-main > .menu-item > .item-link {
+  white-space: nowrap;
 }
 
 .item-link {
@@ -9852,6 +9863,22 @@ footer .footer-bottom::before {
 }
 .accordion-faq_item .accordion-action:not(.collapsed) ~ .collapse .list-tags a.tags-item:hover {
   color: var(--white) !important;
+}
+
+@media (max-width: 768px) {
+  footer .tf-social-1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  footer .tf-social-1 a.text-body-1 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
