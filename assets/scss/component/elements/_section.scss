@@ -36,6 +36,38 @@
             0px 1px 0px 0px #FFFFFF4D inset;
 
         }
+
+        /* Matches `.ropter-ps .r-badge` pill (Problems section) */
+        &.heading-sub--pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 999px;
+            padding: 8px 14px;
+            background: var(--white);
+            border: 1px solid rgba(24, 24, 27, 0.08);
+            box-shadow: none;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--brand);
+
+            &::before {
+                display: none;
+            }
+
+            .dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: var(--brand);
+                flex-shrink: 0;
+            }
+
+            &.heading-sub--pill-muted {
+                background: var(--neutral-100);
+                border-color: var(--neutral-200);
+            }
+        }
     }
     .heading-title {
         font-weight: 600;
@@ -81,6 +113,16 @@
         }
         &.mb-80 {
             margin-bottom: 34px !important;
+        }
+    }
+}
+
+.section-faqs {
+    .heading-section {
+        padding-top: 48px;
+
+        @include res(md) {
+            padding-top: 32px;
         }
     }
 }
