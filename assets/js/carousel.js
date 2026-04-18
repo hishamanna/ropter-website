@@ -33,6 +33,7 @@ $(window).on("load", function () {
         var cursorType = $this.data("cursor") ?? false;
         var loop = $this.data("loop") ?? false;
         var loopMd = $this.data("loop-md") ?? false;
+        var rewind = $this.data("rewind") ?? false;
         var effect = $this.data("effect") || "slide";
         var atPlay = $this.data("auto"); // True || False
         var speed = $this.data("speed") || 800;
@@ -51,6 +52,7 @@ $(window).on("load", function () {
             slidesPerGroup: perGroup,
             grabCursor: cursorType,
             loop: loop,
+            rewind: rewind,
             effect: effect,
             initialSlide: init,
             slideToClickedSlide: clickSlide,

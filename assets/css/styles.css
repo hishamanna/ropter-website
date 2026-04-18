@@ -1771,6 +1771,7 @@ header.header-sticky {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.5019607843);
   backdrop-filter: blur(44px);
+  transform: translateY(-24px);
 }
 .tf-header .mobile-menu {
   width: 40px;
@@ -5129,27 +5130,6 @@ button.animate-btn::after,
   }
 }
 
-.services-image {
-  max-width: 416px;
-  height: 240px;
-  position: absolute;
-  bottom: 0;
-}
-.services-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
-}
-@media (max-width: 991px) {
-  .services-image {
-    position: unset;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-  }
-}
-
 .stack-element {
   position: relative;
   z-index: 1;
@@ -5327,12 +5307,18 @@ button.animate-btn::after,
 .process-heading {
   align-content: center;
 }
+.process-heading .group-btn-slider {
+  margin-top: 32px;
+}
 @media (max-width: 991px) {
   .process-heading .group-btn-slider {
     margin-bottom: 34px;
   }
 }
 
+.process-slide {
+  margin-top: 64px;
+}
 @media (min-width: 992px) {
   .process-slide {
     margin-left: -16px;
@@ -7130,7 +7116,7 @@ button.animate-btn::after,
 }
 
 .section-services .col-left {
-  margin-bottom: 260px;
+  margin-bottom: 0;
 }
 .section-services .top {
   margin-bottom: 59px;
@@ -9856,12 +9842,12 @@ footer .footer-bottom::before {
 .accordion-faq_item .accordion-action:not(.collapsed) ~ .collapse .accordion-content .text.text-neutral-300 {
   color: var(--white) !important;
 }
-.accordion-faq_item .accordion-action:not(.collapsed) ~ .collapse .list-tags a.tags-item {
+.accordion-faq_item .accordion-action:not(.collapsed) ~ .collapse .list-tags .tags-item {
   color: var(--white) !important;
   background: rgba(255, 255, 255, 0.15) !important;
   border-color: rgba(255, 255, 255, 0.25) !important;
 }
-.accordion-faq_item .accordion-action:not(.collapsed) ~ .collapse .list-tags a.tags-item:hover {
+.accordion-faq_item .accordion-action:not(.collapsed) ~ .collapse .list-tags .tags-item:hover {
   color: var(--white) !important;
 }
 

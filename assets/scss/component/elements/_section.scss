@@ -577,25 +577,6 @@
     }
 }
 
-.services-image {
-    max-width: 416px;
-    height: 240px;
-    position: absolute;
-    bottom: 0;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 16px;
-    }
-    @include res(lg) {
-        position: unset;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 30px;
-    }
-}
-
 .stack-element {
     position: relative;
     z-index: 1;
@@ -777,6 +758,9 @@
 
 .process-heading {
     align-content: center;
+    .group-btn-slider {
+        margin-top: 32px;
+    }
     @include res(lg) {
         .group-btn-slider {
             margin-bottom: 34px;
@@ -785,6 +769,7 @@
 }
 
 .process-slide {
+    margin-top: 64px;
     @include res(lg,min) {
         margin-left: -16px;
     }
@@ -2779,7 +2764,7 @@
 
 .section-services {
     .col-left {
-        margin-bottom: 260px;
+        margin-bottom: 0;
     }
     .top {
         margin-bottom: 59px;

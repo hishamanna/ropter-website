@@ -60,9 +60,6 @@
                             <a href="#features" class="item-link link1">Features</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#about" class="item-link link1">About Ropter</a>
-                        </li>
-                        <li class="menu-item">
                             <a href="#process" class="item-link link1">How It Works</a>
                         </li>
                         <li class="menu-item">
@@ -112,7 +109,7 @@
                             </linearGradient>
                             </defs>
                         </svg>
-                        Powered by Closer Engine
+                        Powered by Ropter AI Engine
                     </div>
                     <div class="title text-display-2 effectFade fadeRotateX">
                         <span class="title1 fw-semibold text-gradient-1">Close More Deals With AI That</span>
@@ -143,7 +140,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#about" class="scroll-more">
+            <a href="#features" class="scroll-more">
                 <span class="fw-semibold link1">Scroll for more</span>
                 <i class="icon icon-long-arrow-alt-down-solid"></i>
             </a>
@@ -152,8 +149,82 @@
             <!-- section-services -->
             <div id="features" class="section-services flat-spacing">
                 <style>
-                    #features .list-tags a:hover {
-                        color: #A8A4F5;
+                    #features .list-tags .tags-item {
+                        display: flex;
+                        align-items: center;
+                        padding: 7px 15px;
+                        border-radius: 99px;
+                        color: var(--neutral-300);
+                        background: var(--neutral-700);
+                        border: 1px solid var(--neutral-600);
+                        cursor: default;
+                    }
+                    /* Side-by-side: top of first card lines up with "Everything Your Sales Team Needs to Win"
+                       (below "Features" pill: 6+24+6 padding/line + 32px margin) */
+                    @media (min-width: 992px) {
+                        #features .row > .col-lg-6:last-child {
+                            padding-top: 68px;
+                        }
+                    }
+                    /* Accordion cards ~30% smaller footprint; typography unchanged */
+                    #features .accordion-faq_list {
+                        gap: 16px;
+                    }
+                    #features .accordion-faq_item {
+                        padding: 28px;
+                        border-radius: 28px;
+                    }
+                    #features .accordion-faq_item .accordion-content .text {
+                        padding-top: 17px;
+                        padding-bottom: 67px;
+                    }
+                    #features .accordion-faq_item .accordion-title {
+                        font-size: 34px;
+                        line-height: 46px;
+                    }
+                    #features .accordion-faq_item .accordion-action:not(.collapsed) .accordion-title {
+                        font-size: 46px;
+                        line-height: 54px;
+                    }
+                    #features .accordion-faq_item .accordion-content .text.text-body-3 {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    #features .accordion-faq_item .accordion-title .num.text-body-1 {
+                        font-size: 16px;
+                        line-height: 26px;
+                    }
+                    #features .accordion-faq_item .list-tags {
+                        gap: 6px;
+                    }
+                    #features .accordion-faq_item .list-tags .tags-item {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    @media (max-width: 1439px) {
+                        #features .accordion-faq_item {
+                            border-radius: 17px;
+                            padding: 21px;
+                        }
+                        #features .accordion-faq_item .accordion-content .text {
+                            padding-top: 10px;
+                            padding-bottom: 25px;
+                        }
+                    }
+                    @media (max-width: 767px) {
+                        #features .accordion-faq_item .accordion-title {
+                            font-size: 24px;
+                            line-height: 32px;
+                        }
+                        #features .accordion-faq_item .accordion-action:not(.collapsed) .accordion-title {
+                            font-size: 24px;
+                            line-height: 32px;
+                        }
+                    }
+                    @media (max-width: 575px) {
+                        #features .accordion-faq_item {
+                            padding: 17px;
+                        }
                     }
                 </style>
                 <div class="container">
@@ -165,14 +236,14 @@
                                         <div class="heading-sub fw-semibold effectFade fadeUp">Features</div>
                                         <div class="heading-title text-gradient-3 effectFade fadeRotateX">Everything Your Sales Team Needs to Win</div>
                                     </div>
-                                    <p class="effectFade fadeUp">Ropter plugs into your CRM and gives every rep, manager, and AE the AI intelligence they need — without changing how they work.</p>
+                                    <p class="effectFade fadeUp">AI-powered insights for every stage of your sales process, live inside your CRM — so your reps always know what to do next and your managers never miss what matters.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xxl-6 col-lg-6">
                             <div class="accordion-faq_list" id="accordion-services">
                                 <div class="accordion-faq_item effectFade fadeUp" role="presentation">
-                                    <div class="accordion-action services-image-btn active-img" data-img="assets/images/section/service-1.jpg" data-bs-target="#faq-1" role="button"
+                                    <div class="accordion-action" data-bs-target="#faq-1" role="button"
                                         data-bs-toggle="collapse" aria-controls="faq-1" aria-expanded="true">
                                         <div class="accordion-title">
                                             Deal Health Scoring
@@ -183,15 +254,15 @@
                                         <div class="accordion-content">
                                             <div class="text-body-3 text-neutral-300 text">Every deal gets a live health score based on activity, engagement, and pipeline stage progression.</div>
                                             <div class="list-tags">
-                                                <a href="#" class="tags-item fw-semibold">Real-time scoring</a>
-                                                <a href="#" class="tags-item fw-semibold">Risk signals</a>
-                                                <a href="#" class="tags-item fw-semibold">Stage analysis</a>
+                                                <span class="tags-item fw-semibold">Real-time scoring</span>
+                                                <span class="tags-item fw-semibold">Risk signals</span>
+                                                <span class="tags-item fw-semibold">Stage analysis</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-faq_item effectFade fadeUp" role="presentation">
-                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-2.jpg" data-bs-target="#faq-2" role="button"
+                                    <div class="accordion-action collapsed" data-bs-target="#faq-2" role="button"
                                         data-bs-toggle="collapse" aria-controls="faq-2" aria-expanded="false">
                                         <div class="accordion-title">
                                             Risk Flag Detection
@@ -202,14 +273,14 @@
                                         <div class="accordion-content">
                                             <div class="text-body-3 text-neutral-300 text">Ropter surfaces stalled deals, silent prospects, and rep blind spots before they cost you revenue.</div>
                                             <div class="list-tags">
-                                                <a href="#" class="tags-item fw-semibold">Stall detection</a>
-                                                <a href="#" class="tags-item fw-semibold">Inactivity alerts</a>
+                                                <span class="tags-item fw-semibold">Stall detection</span>
+                                                <span class="tags-item fw-semibold">Inactivity alerts</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-faq_item effectFade fadeUp" role="presentation">
-                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-3.jpg" data-bs-target="#faq-3" role="button"
+                                    <div class="accordion-action collapsed" data-bs-target="#faq-3" role="button"
                                         data-bs-toggle="collapse" aria-controls="faq-3" aria-expanded="false">
                                         <div class="accordion-title">
                                             Rep Performance Coaching
@@ -220,14 +291,14 @@
                                         <div class="accordion-content">
                                             <div class="text-body-3 text-neutral-300 text">AI-generated coaching notes posted directly to your CRM after every deal interaction.</div>
                                             <div class="list-tags">
-                                                <a href="#" class="tags-item fw-semibold">Behavior analysis</a>
-                                                <a href="#" class="tags-item fw-semibold">CRM notes</a>
+                                                <span class="tags-item fw-semibold">Behavior analysis</span>
+                                                <span class="tags-item fw-semibold">CRM notes</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-faq_item effectFade fadeUp" role="presentation">
-                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-4.jpg" data-bs-target="#faq-4" role="button"
+                                    <div class="accordion-action collapsed" data-bs-target="#faq-4" role="button"
                                         data-bs-toggle="collapse" aria-controls="faq-4" aria-expanded="false">
                                         <div class="accordion-title">
                                             Pipeline Intelligence
@@ -238,23 +309,20 @@
                                         <div class="accordion-content">
                                             <div class="text-body-3 text-neutral-300 text">Full pipeline visibility with AI summaries — know exactly where your quarter is heading.</div>
                                             <div class="list-tags">
-                                                <a href="#" class="tags-item fw-semibold">Forecast signals</a>
-                                                <a href="#" class="tags-item fw-semibold">Manager view</a>
+                                                <span class="tags-item fw-semibold">Forecast signals</span>
+                                                <span class="tags-item fw-semibold">Manager view</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="services-image effectFade fadeUp">
-                            <img src="assets/images/section/service-1.jpg" alt="">
-                        </div>
                     </div>
                 </div>
             </div>
             <!-- /section-services -->
-        <!-- section-about-us -->
-        <div class="section-about-us flat-spacing" id="about">
+        <!-- section-about-us (hidden) -->
+        <div class="section-about-us flat-spacing" id="about" style="display: none;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -341,10 +409,11 @@
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="process-heading h-100">
-                                <div class="heading-section mb-80">
+                                <div class="heading-section mb-24">
                                     <div class="heading-sub fw-semibold effectFade fadeUp">How It Works</div>
                                     <div class="heading-title text-gradient-3 effectFade fadeRotateX">Up and Running in Minutes</div>
                                 </div>
+                                <p class="effectFade fadeUp">Ropter plugs into your CRM and gives every rep and manager the AI intelligence they need — without changing how they work.</p>
                                 <div class="group-btn-slider">
                                     <div class="nav-prev-swiper">
                                         <i class="icon icon-angle-left-solid"></i>
@@ -358,7 +427,7 @@
                         <div class="col-lg-7">
                             <div class="process-slide">
                                 <div dir="ltr" class="swiper tf-swiper swiper-box-shadow" data-preview="1.78" data-tablet="2" data-mobile-sm="1" data-mobile="1"
-                                    data-loop="false" data-center="false" data-space-lg="24" data-space-md="24" data-space="30" >
+                                    data-auto="true" data-delay="1500" data-loop="false" data-rewind="true" data-center="false" data-space-lg="24" data-space-md="24" data-space="30" >
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="process-card">
@@ -394,7 +463,7 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="process-card">
-                                                <i class="icon icon-bolt-solid"></i>
+                                                <i class="icon icon-chart-line-solid"></i>
                                                 <div class="content">
                                                     <h4 class="title fw-semibold">Get Actionable Intelligence</h4>
                                                     <p class="text text-secondary">Risk flags, health scores, and rep coaching notes appear directly inside your CRM where your team already works.</p>
@@ -417,7 +486,7 @@
             </div>
             <!-- /section-process -->
             <!-- section-benefits -->
-            <div id="why" class="section-benefits flat-spacing pt-0">
+            <div class="section-benefits flat-spacing pt-0 d-none" aria-hidden="true">
                 <div class="container">
                     <div class="heading-section center mb-70">
                         <div class="heading-sub fw-semibold effectFade fadeUp">Benefits</div>
@@ -513,7 +582,7 @@
             </div>
             <!-- /section-benefits -->
             <!-- section-features -->
-            <div class="section-features flat-spacing pt-0">
+            <div id="why" class="section-features flat-spacing pt-0">
                 <div class="container">
                     <div class="heading-section center mb-64">
                         <div class="heading-sub fw-semibold effectFade fadeUp">Features</div>
@@ -1290,13 +1359,6 @@
                                 <div class="item">
                                     <a href="#features" class="mb-menu-link text-display-1">
                                         <span class="text">Features</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <a href="#about" class="mb-menu-link text-display-1">
-                                        <span class="text">About Ropter</span>
                                     </a>
                                 </div>
                             </li>
