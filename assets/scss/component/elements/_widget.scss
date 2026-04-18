@@ -570,7 +570,7 @@
         position: relative;
 
         &:nth-child(1) {
-            background: #FD3A25;
+            background: #4C40DF;
         }
 
         &:nth-child(2) {
@@ -889,18 +889,18 @@
     width: 208px;
     height: 160px;
     border-radius: 32px;
-    background: linear-gradient(180deg, #EA2B16 0%, #FF3B26 100%),
+    background: linear-gradient(180deg, #3B31C8 0%, #4C40DF 100%),
     radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) ;
     box-shadow: 0px -3px 0px 0px #0000000F inset,
     0px 1px 0px 0px #FFFFFF99 inset,
     0px 3.44px 5.57px 0px #00000016,
-    0px 22.91px 37.08px 0px #FF3B002A,
-    0px 76px 123px 0px #FF3B000D,
-    0px 5.05px 8.18px 0px #FF3B001A,
-    0px 16.98px 27.47px 0px #FF3B000C,
-    0px 56px 83px 0px #FF3B0040,
-    0px 14px 34px 0px #FF3B0040,
-    0px 1px 2px 0px #FF3B0066;
+    0px 22.91px 37.08px 0px rgba(76, 64, 223, 0.165),
+    0px 76px 123px 0px rgba(76, 64, 223, 0.051),
+    0px 5.05px 8.18px 0px rgba(76, 64, 223, 0.102),
+    0px 16.98px 27.47px 0px rgba(76, 64, 223, 0.047),
+    0px 56px 83px 0px rgba(76, 64, 223, 0.251),
+    0px 14px 34px 0px rgba(76, 64, 223, 0.251),
+    0px 1px 2px 0px rgba(76, 64, 223, 0.4);
    
 }
 
@@ -1191,15 +1191,15 @@
         transition: 0.2s;
     }
     &:checked {
-        background: linear-gradient(180deg, #EA2B16 0%, #FF3B26 100%);
+        background: linear-gradient(180deg, #3B31C8 0%, #4C40DF 100%);
         box-shadow: 0px 3.44px 5.57px 0px #00000016,
-        0px 22.91px 37.08px 0px #FF3B002A,
-        0px 76px 123px 0px #FF3B000D,
-        0px 5.05px 8.18px 0px #FF3B001A,
-        0px 16.98px 27.47px 0px #FF3B000C,
-        0px 56px 83px 0px #FF3B0040,
-        0px 14px 34px 0px #FF3B0040,
-        0px 1px 2px 0px #FF3B0066;
+        0px 22.91px 37.08px 0px rgba(76, 64, 223, 0.165),
+        0px 76px 123px 0px rgba(76, 64, 223, 0.051),
+        0px 5.05px 8.18px 0px rgba(76, 64, 223, 0.102),
+        0px 16.98px 27.47px 0px rgba(76, 64, 223, 0.047),
+        0px 56px 83px 0px rgba(76, 64, 223, 0.251),
+        0px 14px 34px 0px rgba(76, 64, 223, 0.251),
+        0px 1px 2px 0px rgba(76, 64, 223, 0.4);
         &::before {
             left: 88px;
         }

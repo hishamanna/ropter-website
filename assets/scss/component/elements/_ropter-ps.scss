@@ -1,0 +1,1192 @@
+@use "../../abstracts/variable" as *;
+
+/* Ropter · Problems + Bridge + Solutions (scoped) */
+.ropter-ps {
+    --bg: var(--body);
+    --bg-2: var(--neutral-100);
+    --ink: var(--primary);
+    --ink-2: var(--neutral-800);
+    --ink-3: var(--neutral-500);
+    --ink-4: var(--neutral-400);
+    --line: rgba(24, 24, 27, 0.08);
+    --iris: #4C40DF;
+    --red: #E34848;
+    --amber: #F59E0B;
+    --green-soft: #9FFFBE;
+
+    background: var(--bg);
+    color: var(--ink);
+    font-family: $font-main;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.ropter-ps *,
+.ropter-ps *::before,
+.ropter-ps *::after {
+    box-sizing: border-box;
+}
+
+.ropter-ps button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+/* shared type */
+.ropter-ps .r-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 13px;
+    color: var(--iris);
+    font-weight: 500;
+    border: 1px solid var(--line);
+}
+
+.ropter-ps .r-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--iris);
+}
+
+.ropter-ps .r-h-display {
+    font-family: $font-main;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    font-size: clamp(42px, 6.4vw, 92px);
+    color: var(--ink);
+    margin: 0;
+}
+
+.ropter-ps .r-h-display em {
+    font-family: $font-main;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: -0.02em;
+}
+
+.ropter-ps .r-lead {
+    color: var(--ink-2);
+    font-size: 16px;
+    line-height: 1.55;
+    max-width: 52ch;
+    margin: 0;
+}
+
+/* reveal on scroll */
+.ropter-ps .r-reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ropter-ps .r-reveal.in {
+    opacity: 1;
+    transform: none;
+}
+
+.ropter-ps .r-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.ropter-ps .r-section+.r-section {
+    padding-top: 0;
+}
+
+/* Problems */
+.ropter-ps .rp {
+    display: grid;
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: 64px;
+}
+
+.ropter-ps .rp-left {
+    position: sticky;
+    top: 32px;
+    align-self: start;
+}
+
+.ropter-ps .rp-left .r-badge {
+    margin-bottom: 28px;
+}
+
+.ropter-ps .rp-left h1 {
+    margin: 0 0 24px;
+}
+
+.ropter-ps .rp-left .r-lead {
+    margin-bottom: 32px;
+}
+
+.ropter-ps .rp-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.ropter-ps .rp-stat {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid var(--line);
+}
+
+.ropter-ps .rp-stat .k {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.ropter-ps .rp-stat .v {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.ropter-ps .rp-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ropter-ps .rp-card {
+    background: var(--white);
+    border-radius: 24px;
+    border: 1px solid var(--line);
+    padding: 24px 28px;
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.ropter-ps .rp-card .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.ropter-ps .rp-card .title {
+    font-family: $font-main;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    transition: color 0.3s;
+    margin: 0;
+}
+
+.ropter-ps .rp-card:hover .title {
+    color: var(--iris);
+}
+
+.ropter-ps .rp-card .num {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 13px;
+    color: var(--ink-4);
+}
+
+.ropter-ps .rp-card .body {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s;
+    margin-top: 0;
+}
+
+.ropter-ps .rp-card.open .body {
+    max-height: 700px;
+    opacity: 1;
+    margin-top: 22px;
+}
+
+.ropter-ps .rp-card.open {
+    box-shadow: 0 30px 60px -30px rgba(76, 64, 223, 0.18);
+    border-color: rgba(76, 64, 223, 0.18);
+}
+
+.ropter-ps .rp-card .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.ropter-ps .rp-card .body p {
+    margin: 0 0 14px;
+    color: var(--ink-2);
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.ropter-ps .rp-card .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.ropter-ps .rp-card .chip {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    background: var(--bg-2);
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+}
+
+.ropter-ps .rp-viz {
+    background: linear-gradient(180deg, #FAFAFC, #F3F3F6);
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    padding: 16px;
+    position: relative;
+    min-height: 180px;
+    overflow: hidden;
+}
+
+.ropter-ps .rp-viz .rp-viz-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.ropter-ps .rp-viz .rp-viz-title {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+}
+
+.ropter-ps .rp-viz .live {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.ropter-ps .rp-viz .live .bulb {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--red);
+    box-shadow: 0 0 0 0 rgba(227, 72, 72, 0.5);
+    animation: rp-pulse 1.8s infinite;
+}
+
+@keyframes rp-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(227, 72, 72, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px rgba(227, 72, 72, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(227, 72, 72, 0);
+    }
+}
+
+.ropter-ps .rp-pill {
+    display: inline-flex;
+    align-items: center;
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.06em;
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 4px 8px;
+    border-radius: 999px;
+}
+
+.ropter-ps .rp-slip {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ropter-ps .rp-slip-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ropter-ps .rp-slip-row .day {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    color: var(--ink-4);
+    width: 46px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.ropter-ps .rp-slip-row .bar {
+    flex: 1;
+    height: 10px;
+    border-radius: 5px;
+    background: var(--line);
+    position: relative;
+    overflow: hidden;
+}
+
+.ropter-ps .rp-slip-row .bar .fill {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #16A36A, var(--amber) 70%, var(--red));
+    border-radius: 5px;
+}
+
+.ropter-ps .rp-slip-row .label {
+    font-size: 11px;
+    color: var(--ink-3);
+    width: 68px;
+    text-align: right;
+    font-family: $font-roboto, ui-monospace, monospace;
+}
+
+.ropter-ps .rp-alert {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    background: #FFF5F5;
+    border: 1px solid rgba(227, 72, 72, 0.18);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-top: 10px;
+}
+
+.ropter-ps .rp-alert .icn {
+    color: var(--red);
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.ropter-ps .rp-alert .txt {
+    font-size: 11.5px;
+    color: #8A2A2A;
+    line-height: 1.4;
+}
+
+.ropter-ps .rp-alert .txt b {
+    color: var(--red);
+}
+
+.ropter-ps .rp-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.ropter-ps .rp-field {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 11px;
+}
+
+.ropter-ps .rp-field .k {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    color: var(--ink-4);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.ropter-ps .rp-field .v {
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.ropter-ps .rp-field.empty {
+    background: repeating-linear-gradient(45deg, var(--white) 0 6px, #F5F5F7 6px 12px);
+    border-style: dashed;
+}
+
+.ropter-ps .rp-field.empty .v {
+    color: var(--red);
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+}
+
+.ropter-ps .rp-field.stale {
+    background: #FFFBEF;
+    border-color: rgba(245, 158, 11, 0.25);
+}
+
+.ropter-ps .rp-field.stale .v {
+    color: #8A5A00;
+}
+
+.ropter-ps .rp-funnel {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ropter-ps .rp-funnel .f-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    position: relative;
+}
+
+.ropter-ps .rp-funnel .st {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    width: 90px;
+}
+
+.ropter-ps .rp-funnel .cnt {
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--ink);
+    width: 44px;
+}
+
+.ropter-ps .rp-funnel .track {
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--line);
+    overflow: hidden;
+}
+
+.ropter-ps .rp-funnel .track span {
+    display: block;
+    height: 100%;
+    background: var(--iris);
+    border-radius: 4px;
+}
+
+.ropter-ps .rp-funnel .f-row.stall {
+    background: linear-gradient(90deg, #FFFAF0 0%, var(--white) 70%);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.ropter-ps .rp-funnel .f-row.stall .track span {
+    background: var(--amber);
+}
+
+.ropter-ps .rp-funnel .tag {
+    position: absolute;
+    right: 12px;
+    top: -8px;
+    background: var(--amber);
+    color: var(--white);
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.ropter-ps .rp-prio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.ropter-ps .rp-prio h5 {
+    margin: 0 0 8px;
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.ropter-ps .rp-prio h5 i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.ropter-ps .rp-prio .i-red {
+    background: var(--red);
+}
+
+.ropter-ps .rp-prio .i-green {
+    background: #16A36A;
+}
+
+.ropter-ps .rp-prio .t {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ropter-ps .rp-prio .t .n {
+    font-weight: 500;
+    color: var(--ink);
+}
+
+.ropter-ps .rp-prio .t .s {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    color: var(--ink-4);
+}
+
+.ropter-ps .rp-prio .t.hot {
+    background: #F5F3FF;
+    border-color: rgba(76, 64, 223, 0.25);
+}
+
+.ropter-ps .rp-prio .t.hot .s {
+    color: var(--iris);
+}
+
+/* Bridge */
+.ropter-ps .r-bridge {
+    padding: 40px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ropter-ps .r-bridge-inner {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ropter-ps .r-bridge-inner .eb {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--iris);
+    margin-bottom: 20px;
+}
+
+.ropter-ps .r-bridge-inner h3 {
+    font-family: $font-main;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    font-size: clamp(32px, 4.8vw, 60px);
+    margin: 0 auto;
+    max-width: 18ch;
+    color: var(--ink);
+}
+
+.ropter-ps .r-bridge-inner h3 em {
+    font-family: $font-main;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--iris);
+}
+
+.ropter-ps .r-bridge-inner .rule {
+    width: 60px;
+    height: 1px;
+    background: var(--iris);
+    margin: 28px auto 0;
+}
+
+.ropter-ps .r-bridge-inner .sub {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 16px;
+}
+
+/* Solutions */
+.ropter-ps .rs {
+    display: grid;
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: 64px;
+}
+
+.ropter-ps .rs-left {
+    position: sticky;
+    top: 32px;
+    align-self: start;
+}
+
+.ropter-ps .rs-left .r-badge {
+    margin-bottom: 28px;
+}
+
+.ropter-ps .rs-left h2 {
+    margin: 0 0 24px;
+}
+
+.ropter-ps .rs-left .r-lead {
+    margin-bottom: 24px;
+}
+
+.ropter-ps .rs-map {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 24px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+}
+
+.ropter-ps .rs-map .k {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+    margin-bottom: 8px;
+}
+
+.ropter-ps .rs-map-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 10px;
+    align-items: center;
+    font-size: 12.5px;
+    padding: 8px 0;
+}
+
+.ropter-ps .rs-map-row .p {
+    color: var(--ink-3);
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 11px;
+}
+
+.ropter-ps .rs-map-row .s {
+    color: var(--ink);
+    font-weight: 500;
+}
+
+.ropter-ps .rs-map-row .arr {
+    color: var(--iris);
+}
+
+.ropter-ps .rs-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ropter-ps .rs-card {
+    background: var(--white);
+    border-radius: 24px;
+    border: 1px solid var(--line);
+    padding: 24px 28px;
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.ropter-ps .rs-card .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.ropter-ps .rs-card .title {
+    font-family: $font-main;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    transition: color 0.3s;
+    margin: 0;
+}
+
+.ropter-ps .rs-card:hover .title {
+    color: var(--iris);
+}
+
+.ropter-ps .rs-card .num {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 13px;
+    color: var(--ink-4);
+    transition: color 0.3s;
+}
+
+.ropter-ps .rs-card .body {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s;
+}
+
+.ropter-ps .rs-card.open .body {
+    max-height: 800px;
+    opacity: 1;
+    margin-top: 16px;
+}
+
+.ropter-ps .rs-card.open {
+    background: var(--iris);
+    border-color: var(--iris);
+    color: var(--white);
+    box-shadow: 0 30px 60px -30px rgba(76, 64, 223, 0.5);
+}
+
+.ropter-ps .rs-card.open .title {
+    color: var(--white);
+}
+
+.ropter-ps .rs-card.open .num {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.ropter-ps .rs-card .desc {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 0 0 14px;
+    max-width: 58ch;
+}
+
+.ropter-ps .rs-card .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.ropter-ps .rs-card .chips .chip {
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--white);
+    border: 0;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.ropter-ps .rs-viz {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 14px;
+    color: var(--white);
+}
+
+.ropter-ps .rs-viz .rs-viz-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.ropter-ps .rs-viz .rs-viz-title {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ropter-ps .rs-viz .live-ok {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    color: var(--green-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.ropter-ps .rs-viz .live-ok .bulb {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ADE80;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+    animation: rs-pulse 1.8s infinite;
+}
+
+@keyframes rs-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
+}
+
+.ropter-ps .rs-gauge {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.ropter-ps .rs-gauge svg {
+    flex-shrink: 0;
+}
+
+.ropter-ps .rs-gauge .score {
+    font-family: $font-main;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--white);
+}
+
+.ropter-ps .rs-gauge .score small {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-left: 3px;
+    font-weight: 400;
+}
+
+.ropter-ps .rs-gauge .txt {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.45;
+}
+
+.ropter-ps .rs-gauge .txt b {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.ropter-ps .rs-rings {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.ropter-ps .rs-rings .r {
+    display: grid;
+    grid-template-columns: 60px 1fr 38px;
+    gap: 10px;
+    align-items: center;
+    font-size: 11px;
+}
+
+.ropter-ps .rs-rings .l {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+}
+
+.ropter-ps .rs-rings .bar {
+    height: 5px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.ropter-ps .rs-rings .bar span {
+    position: absolute;
+    inset: 0;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--green-soft), #4ADE80);
+}
+
+.ropter-ps .rs-rings .v {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--white);
+    text-align: right;
+}
+
+.ropter-ps .rs-flags {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ropter-ps .rs-flag {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 9px 11px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ropter-ps .rs-flag .dt {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    color: var(--white);
+}
+
+.ropter-ps .rs-flag .cnt {
+    flex: 1;
+    min-width: 0;
+}
+
+.ropter-ps .rs-flag .cnt .t {
+    font-size: 12px;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.ropter-ps .rs-flag .cnt .m {
+    font-size: 10.5px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: $font-roboto, ui-monospace, monospace;
+    margin-top: 2px;
+}
+
+.ropter-ps .rs-flag .go {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    align-self: center;
+}
+
+.ropter-ps .rs-queue {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ropter-ps .rs-q-row {
+    display: grid;
+    grid-template-columns: 24px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 9px 11px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ropter-ps .rs-q-row.top {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.ropter-ps .rs-q-row .rk {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 500;
+}
+
+.ropter-ps .rs-q-row .n {
+    font-size: 12px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.ropter-ps .rs-q-row .n small {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    display: block;
+    margin-top: 2px;
+}
+
+.ropter-ps .rs-q-row .v {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--green-soft);
+    text-align: right;
+}
+
+.ropter-ps .rs-coach {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+}
+
+.ropter-ps .rs-coach .who {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.ropter-ps .rs-coach .who .av {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--white);
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ropter-ps .rs-coach .who .name {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.ropter-ps .rs-coach .who .tg {
+    margin-left: auto;
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 9.5px;
+    color: var(--green-soft);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ropter-ps .rs-coach p {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+.ropter-ps .rs-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+
+.ropter-ps .rs-flow .stg {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+}
+
+.ropter-ps .rs-flow .stg .n {
+    font-family: $font-main;
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.ropter-ps .rs-flow .stg .l {
+    font-family: $font-roboto, ui-monospace, monospace;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.ropter-ps .rs-flow .stg .bar {
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.12);
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.ropter-ps .rs-flow .stg .bar span {
+    display: block;
+    height: 100%;
+    background: var(--green-soft);
+}
+
+.ropter-ps .rs-flow-note {
+    margin-top: 10px;
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.45;
+}
+
+.ropter-ps .rs-flow-note b {
+    color: var(--white);
+    font-weight: 500;
+}
+
+@media (max-width: 980px) {
+
+    .ropter-ps .rp,
+    .ropter-ps .rs {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .ropter-ps .rp-left,
+    .ropter-ps .rs-left {
+        position: static;
+    }
+
+    .ropter-ps .rp-card .body-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .ropter-ps .r-section {
+        padding: 56px 16px;
+    }
+
+    .ropter-ps .rp-card,
+    .ropter-ps .rs-card {
+        padding: 20px;
+    }
+}
