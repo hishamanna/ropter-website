@@ -827,6 +827,13 @@
     }
 }
 
+// pt-0 removes flat-spacing top padding; on smaller screens the heading column stacks first and needs breathing room
+.section-process.flat-spacing.pt-0 {
+    @include res(lg) {
+        padding-top: 25px !important;
+    }
+}
+
 .process-heading {
     align-content: center;
     .group-btn-slider {

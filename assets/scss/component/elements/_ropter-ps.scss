@@ -21,6 +21,13 @@
     text-rendering: optimizeLegibility;
 }
 
+/* Theme reset hides all <br> below 992px; restore breaks in Ropter sections. */
+@media (max-width: 991px) {
+    .ropter-ps br {
+        display: revert;
+    }
+}
+
 .ropter-ps *,
 .ropter-ps *::before,
 .ropter-ps *::after {
