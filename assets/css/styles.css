@@ -4753,20 +4753,38 @@ button.animate-btn::after,
   height: 177px;
   overflow: hidden;
 }
-.section-hero .content-wrap .title-icon .img-1 {
+.section-hero .content-wrap .title-icon .img-1-wrap {
   position: absolute;
   left: 49px;
   top: 0;
+  transform: scale(0.5775);
+  transform-origin: 0 0;
 }
-.section-hero .content-wrap .title-icon .img-2 {
+.section-hero .content-wrap .title-icon .img-1-wrap .img-1 {
+  position: static;
+  display: block;
+}
+.section-hero .content-wrap .title-icon .img-2-wrap {
   position: absolute;
   left: 136px;
   top: 28px;
+  transform: scale(0.85);
+  transform-origin: 0 0;
 }
-.section-hero .content-wrap .title-icon .img-3 {
+.section-hero .content-wrap .title-icon .img-2-wrap .img-2 {
+  position: static;
+  display: block;
+}
+.section-hero .content-wrap .title-icon .img-3-wrap {
   position: absolute;
   left: 66px;
   top: 83px;
+  transform: scale(0.60);
+  transform-origin: 0 0;
+}
+.section-hero .content-wrap .title-icon .img-3-wrap .img-3 {
+  position: static;
+  display: block;
 }
 .section-hero .content-wrap .text {
   margin-bottom: 24px;

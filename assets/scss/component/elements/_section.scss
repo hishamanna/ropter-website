@@ -175,20 +175,38 @@
                 height: 177px;
                 overflow: hidden;
             }
-            .img-1 {
+            .img-1-wrap {
                 position: absolute;
                 left: 49px;
                 top: 0;
+                transform: scale(0.5775);
+                transform-origin: 0 0;
             }
-            .img-2 {
+            .img-1 {
+                position: static;
+                display: block;
+            }
+            .img-2-wrap {
                 position: absolute;
                 left: 136px;
                 top: 28px;
+                transform: scale(0.85);
+                transform-origin: 0 0;
             }
-            .img-3 {
+            .img-2 {
+                position: static;
+                display: block;
+            }
+            .img-3-wrap {
                 position: absolute;
                 left: 66px;
                 top: 83px;
+                transform: scale(0.60);
+                transform-origin: 0 0;
+            }
+            .img-3 {
+                position: static;
+                display: block;
             }
         }
         .text {
